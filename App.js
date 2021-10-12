@@ -17,10 +17,10 @@ import {useState, useEffect} from "react";
   const [selectedAddress, setSelectedAddress] = useState(null)
 
   /*
-  * getLocationPermission udnytter den prdefinerede asynkrone metode requestForegroundPermissionsAsync,
-  * som aktivere en forespørgsel om tilladelse til at benytte enhedens position
+  * getLocationPermission udnytter den prædefinerede asynkrone metode requestForegroundPermissionsAsync,
+  * som aktiverer en forespørgsel om tilladelse til at benytte enhedens position
   * resultatet af denne handling leveres og benyttes til at sætte værdien af locationPermission
-  * Væriden sættes pba. af værdien item.granted
+  * Værdien sættes pba. af værdien item.granted
   * Læs mere i dokumentationen:  https://docs.expo.dev/versions/latest/sdk/location/
   */
      const getLocationPermission = async () => {
@@ -37,7 +37,7 @@ import {useState, useEffect} from "react";
      });
 
 /*
-* Metoden updateLocation udnytter den prædefinerede asynkrone kald, getCurrentPositionAsync, returnerer enhedens aktuelle position 
+* Metoden updateLocation udnytter det prædefinerede asynkrone kald, getCurrentPositionAsync, returnerer enhedens aktuelle position 
 * Resultatet fra kaldet benyttes til at fastsætte værdien af currentlokation. 
 * argumentet, Accuracy.Balanced, angiver den nøjagtighed vi ønsker skal bruges til at angive positionen. 
 * Læs mere på den førnævnte dokumentation
@@ -49,7 +49,7 @@ import {useState, useEffect} from "react";
   };
 /*
 * Metoden handleLongPress tager en event med som argument og henter værdien af et koordinatsæt fra denne
-* Denne værdi gemmes i en varaibel, der tilføjes til et array af koordinater. 
+* Værdien gemmes i en variabel, der tilføjes til et array af koordinater. 
 */
   const handleLongPress = event => {
       const coordinate = event.nativeEvent.coordinate
@@ -57,7 +57,7 @@ import {useState, useEffect} from "react";
   };
 
      /*
-   * Metoden handleSelectMarker tager en koordinat med som argument sætter bruger denne 
+   * Metoden handleSelectMarker tager en koordinat med som argument. Kordinaten bruges  
    * til at sætte værdien af selectedCoordinat-variablen 
    * Dernæst aktiveres et asynkront kald, i form af den prædefinerede metode, reverseGeocodeAsync.
    * reverseGeocodeAsync omsætter koordinatsættet til en række data, herunder område- og adresse data.
@@ -101,7 +101,7 @@ import {useState, useEffect} from "react";
     );
   };
 
-//Slutteligt benyttes SafeAreaView sikrer at indholdet ikke overskrider grænser for enheden(Kun for IOS enheder version 11 eller nyere )
+//Slutteligt benyttes SafeAreaView der sikrer at indholdet ikke overskrider grænser for enheden(Kun for IOS enheder version 11 eller nyere )
 /*
 * Dernæst kaldes RenderCurrenokation view
 * Mapview er fremviser et kort, der viser brugerens lokation
